@@ -67,31 +67,38 @@ export default function Hero() {
           {/* Right: Product Image */}
           <div className="relative">
             <div className="relative max-w-lg mx-auto">
-              {/* Ink-stain gradient background effect */}
-              <div className="absolute inset-0 scale-110">
-                <div className="absolute inset-0 bg-gradient-radial from-black via-gray-900/80 via-40% to-transparent opacity-60 blur-2xl"></div>
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-orange-500/10 to-transparent"></div>
+              {/* Ink-stain gradient background effect - blurred layers behind product */}
+              <div className="absolute inset-0 -z-10">
+                <div className="absolute inset-0 scale-125 bg-gradient-radial from-black/60 via-gray-900/40 via-50% to-transparent blur-3xl"></div>
+                <div className="absolute inset-0 scale-110 bg-gradient-radial from-black/30 via-transparent to-transparent blur-2xl"></div>
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-orange-500/5 to-transparent"></div>
               </div>
               
-              {/* Product image with blend mode */}
+              {/* Product image - crisp and clear, only edges fade */}
               <div className="relative z-10">
-                <Image
-                  src="/device-render.png"
-                  alt="GateFire 510 battery with heat-gated activation technology showing the signature heat-sensing ring"
-                  width={800}
-                  height={1000}
-                  priority
-                  className="w-full h-auto mix-blend-normal relative"
+                <div 
+                  className="relative"
                   style={{
-                    filter: 'drop-shadow(0 25px 50px rgba(0, 0, 0, 0.5))',
-                    maskImage: 'radial-gradient(ellipse at center, black 40%, transparent 100%)',
-                    WebkitMaskImage: 'radial-gradient(ellipse at center, black 40%, transparent 100%)',
+                    maskImage: 'radial-gradient(ellipse 80% 85% at center, black 60%, transparent 100%)',
+                    WebkitMaskImage: 'radial-gradient(ellipse 80% 85% at center, black 60%, transparent 100%)',
                   }}
-                />
+                >
+                  <Image
+                    src="/device-render.png"
+                    alt="GateFire 510 battery with heat-gated activation technology showing the signature heat-sensing ring"
+                    width={800}
+                    height={1000}
+                    priority
+                    className="w-full h-auto"
+                    style={{
+                      filter: 'drop-shadow(0 25px 50px rgba(0, 0, 0, 0.5))',
+                    }}
+                  />
+                </div>
               </div>
               
-              {/* Subtle glow effect for the ring */}
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-orange-500/20 rounded-full blur-3xl animate-pulse"></div>
+              {/* Subtle glow effect for the heat ring */}
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 translate-y-1/4 w-24 h-24 bg-orange-500/20 rounded-full blur-2xl animate-pulse -z-5"></div>
             </div>
           </div>
         </div>
