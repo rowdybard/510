@@ -1,0 +1,37 @@
+# Render Blueprint for GateFire 510
+# This file allows one-click deployment to Render
+# See: https://render.com/docs/blueprint-spec
+
+services:
+  - type: web
+    name: gatefire-510-preorder
+    env: node
+    region: oregon # Change to your preferred region
+    plan: starter # Use 'free' for testing, 'starter' for production
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: STRIPE_SECRET_KEY
+        sync: false # Manual entry required
+      - key: NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY
+        sync: false # Manual entry required
+      - key: NEXT_PUBLIC_SITE_URL
+        value: https://gatefire-510-preorder.onrender.com # Update with your actual URL
+      - key: STRIPE_PRICE_EARLY
+        sync: false # Optional
+      - key: STRIPE_PRICE_RESERVE
+        sync: false # Optional
+      - key: STRIPE_PRICE_TWIN
+        sync: false # Optional
+      - key: STRIPE_PRICE_RETAIL
+        sync: false # Optional
+      - key: UPSTASH_REDIS_REST_URL
+        sync: false # Optional
+      - key: UPSTASH_REDIS_REST_TOKEN
+        sync: false # Optional
+      - key: NEXT_PUBLIC_ANALYTICS_ENABLED
+        value: false
+    healthCheckPath: /
+    autoDeploy: true # Auto-deploy on git push

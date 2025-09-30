@@ -1,0 +1,13 @@
+PLACEHOLDER: Replace this file with a favicon.
+
+You can generate a favicon from your logo using:
+- https://favicon.io/
+- https://realfavicongenerator.net/
+
+Recommended: Include multiple sizes (16x16, 32x32, 48x48)
+File name: favicon.ico
+
+Also consider adding:
+- apple-touch-icon.png (180x180) for iOS home screen
+- favicon-16x16.png
+- favicon-32x32.png

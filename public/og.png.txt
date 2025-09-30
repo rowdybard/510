@@ -1,0 +1,14 @@
+PLACEHOLDER: Replace this file with an Open Graph image for social sharing.
+
+Recommended size: 1200x630px
+Format: PNG or JPG
+File name: og.png
+
+This image appears when your site is shared on social media (Twitter, Facebook, LinkedIn, etc.)
+
+Include:
+- GateFire 510 branding
+- Product image
+- Key tagline: "Pocket-Proof 510. Fires only with your touch."
+
+Until you add a real image, social shares will use a default preview.

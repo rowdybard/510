@@ -1,0 +1,90 @@
+╔════════════════════════════════════════════════════════════╗
+║                                                            ║
+║          GateFire 510 Pre-Order Site - INSTALL             ║
+║                                                            ║
+╚════════════════════════════════════════════════════════════╝
+
+STEP 1: Install Dependencies
+────────────────────────────────────────────────────────────
+Run in your terminal:
+
+    npm install
+
+This will install all required packages (~2 minutes).
+
+
+STEP 2: Configure Stripe
+────────────────────────────────────────────────────────────
+1. Sign up at https://stripe.com (free account)
+
+2. Get your test API keys:
+   → Go to: https://dashboard.stripe.com/test/apikeys
+   → Copy both keys (Publishable & Secret)
+
+3. Create .env.local file:
+   → Copy .env.local.example to .env.local
+   → Paste your Stripe keys
+
+Your .env.local should look like:
+
+    STRIPE_SECRET_KEY=sk_test_51ABC...
+    NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=pk_test_51ABC...
+    NEXT_PUBLIC_SITE_URL=http://localhost:3000
+
+
+STEP 3: Run the Site
+────────────────────────────────────────────────────────────
+    npm run dev
+
+→ Open: http://localhost:3000
+→ Your site is live! 🎉
+
+
+STEP 4: Test Pre-Orders
+────────────────────────────────────────────────────────────
+1. Click "Reserve for $49" or any tier button
+2. Use Stripe test card:
+   
+   Card: 4242 4242 4242 4242
+   Expiry: Any future date (e.g., 12/34)
+   CVC: Any 3 digits (e.g., 123)
+   ZIP: Any 5 digits (e.g., 12345)
+
+3. Complete checkout
+4. You'll see the Thank You page!
+
+
+OPTIONAL: Add Real Images
+────────────────────────────────────────────────────────────
+Replace these placeholders in /public/:
+
+  □ device-render.svg → Your product photo (600x600px)
+  □ og.png → Social sharing image (1200x630px)
+  □ favicon.ico → Your favicon
+  □ apple-touch-icon.png → iOS icon (180x180px)
+
+
+NEED HELP?
+────────────────────────────────────────────────────────────
+📖 Full Docs: README.md
+🚀 Quick Start: QUICKSTART.md
+☁️  Deploy to Render: DEPLOYMENT.md or RENDER_QUICKSTART.md
+📧 Email: hello@gatefire510.com
+
+
+TROUBLESHOOTING
+────────────────────────────────────────────────────────────
+Problem: "STRIPE_SECRET_KEY is not set"
+Fix: Make sure .env.local exists with your keys
+
+Problem: Images not showing
+Fix: This is normal with placeholders, replace with real PNGs
+
+Problem: Stats show 0
+Fix: Complete a test checkout first
+
+Problem: Port 3000 in use
+Fix: Use: npm run dev -- -p 3001
+
+
+You're all set! Happy launching! 🚀
