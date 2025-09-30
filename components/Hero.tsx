@@ -66,16 +66,32 @@ export default function Hero() {
 
           {/* Right: Product Image */}
           <div className="relative">
-            <div className="relative aspect-square max-w-lg mx-auto">
-              <div className="absolute inset-0 bg-gradient-to-br from-orange-500/20 to-red-600/20 rounded-full blur-3xl"></div>
-              <Image
-                src="/device-render.svg"
-                alt="GateFire 510 battery with heat-gated activation technology"
-                width={600}
-                height={600}
-                priority
-                className="relative z-10 drop-shadow-2xl"
-              />
+            <div className="relative max-w-lg mx-auto">
+              {/* Ink-stain gradient background effect */}
+              <div className="absolute inset-0 scale-110">
+                <div className="absolute inset-0 bg-gradient-radial from-black via-gray-900/80 via-40% to-transparent opacity-60 blur-2xl"></div>
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-orange-500/10 to-transparent"></div>
+              </div>
+              
+              {/* Product image with blend mode */}
+              <div className="relative z-10">
+                <Image
+                  src="/device-render.png"
+                  alt="GateFire 510 battery with heat-gated activation technology showing the signature heat-sensing ring"
+                  width={800}
+                  height={1000}
+                  priority
+                  className="w-full h-auto mix-blend-normal relative"
+                  style={{
+                    filter: 'drop-shadow(0 25px 50px rgba(0, 0, 0, 0.5))',
+                    maskImage: 'radial-gradient(ellipse at center, black 40%, transparent 100%)',
+                    WebkitMaskImage: 'radial-gradient(ellipse at center, black 40%, transparent 100%)',
+                  }}
+                />
+              </div>
+              
+              {/* Subtle glow effect for the ring */}
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-orange-500/20 rounded-full blur-3xl animate-pulse"></div>
             </div>
           </div>
         </div>

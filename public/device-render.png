@@ -1,0 +1,9 @@
+PLACEHOLDER: Replace this file with your actual product image.
+
+INSTRUCTIONS:
+1. Save the GateFire product image you shared as: device-render.png
+2. Place it in the /public/ folder (replace this file)
+3. Recommended size: 1200x1600px or higher
+4. Keep the black background - the code will blend it automatically
+
+The CSS will create an ink-stain effect that blends the black background into white.
