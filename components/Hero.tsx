@@ -27,12 +27,14 @@ export default function Hero() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left: Copy */}
           <div className="text-center lg:text-left">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight tracking-tight">
               Pocket-Proof 510.{' '}
-              <span className="text-orange-600">Fires only with your touch.</span>
+              <span className="bg-gradient-to-r from-lime-500 to-primary-500 bg-clip-text text-transparent">
+                Fires only with your touch.
+              </span>
             </h1>
             
-            <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto lg:mx-0">
+            <p className="text-lg md:text-xl text-slate-600 dark:text-slate-400 mb-8 max-w-2xl mx-auto lg:mx-0 font-light leading-relaxed">
               Meet GateFire 510 — the first 510 battery that requires live human touch + body heat to activate. 
               No pocket presses. No accidental cooking your oil. No biometrics, no app, no cloud.
             </p>
@@ -41,16 +43,16 @@ export default function Hero() {
               <a
                 href="#tiers"
                 onClick={scrollToTiers}
-                className="inline-flex items-center justify-center px-8 py-4 bg-orange-600 hover:bg-orange-700 text-white rounded-lg text-lg font-semibold transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2"
+                className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-lime-500 to-primary-600 hover:from-lime-600 hover:to-primary-700 text-white rounded-xl text-lg font-medium transition-all hover:shadow-lg hover:shadow-lime-500/25 focus:outline-none focus:ring-2 focus:ring-lime-500 focus:ring-offset-2"
               >
                 Reserve for $49
-                <span className="ml-2 text-sm font-normal opacity-90">(Save $20 today)</span>
+                <span className="ml-2 text-sm font-light opacity-90">(Save $20 today)</span>
               </a>
               
               <a
                 href="#how-it-works"
                 onClick={scrollToHowItWorks}
-                className="inline-flex items-center justify-center px-8 py-4 border-2 border-gray-300 dark:border-gray-600 hover:border-orange-600 dark:hover:border-orange-600 rounded-lg text-lg font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2"
+                className="inline-flex items-center justify-center px-8 py-4 border-2 border-slate-200 dark:border-slate-700 hover:border-lime-500 dark:hover:border-lime-500 rounded-xl text-lg font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-lime-500 focus:ring-offset-2"
               >
                 Learn how it works
               </a>
@@ -67,14 +69,26 @@ export default function Hero() {
           {/* Right: Product Image */}
           <div className="relative">
             <div className="relative max-w-lg mx-auto">
-              <Image
-                src="/device-render.png"
-                alt="GateFire 510 battery with heat-gated activation technology showing the signature heat-sensing ring"
-                width={800}
-                height={1000}
-                priority
-                className="w-full h-auto"
-              />
+              {/* Soft gradient background */}
+              <div className="absolute inset-0 bg-gradient-to-br from-lime-500/5 via-transparent to-primary-500/5 -z-10"></div>
+              
+              {/* Product image with soft edges */}
+              <div 
+                className="relative"
+                style={{
+                  maskImage: 'radial-gradient(ellipse 85% 90% at center, black 50%, rgba(0,0,0,0.8) 70%, transparent 100%)',
+                  WebkitMaskImage: 'radial-gradient(ellipse 85% 90% at center, black 50%, rgba(0,0,0,0.8) 70%, transparent 100%)',
+                }}
+              >
+                <Image
+                  src="/device-render.png"
+                  alt="GateFire 510 battery with heat-gated activation technology showing the signature heat-sensing ring"
+                  width={800}
+                  height={1000}
+                  priority
+                  className="w-full h-auto"
+                />
+              </div>
             </div>
           </div>
         </div>

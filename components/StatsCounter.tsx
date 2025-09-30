@@ -54,7 +54,7 @@ export default function StatsCounter() {
   }
 
   return (
-    <div className="bg-gradient-to-br from-orange-500 to-red-600 text-white rounded-2xl p-8 shadow-2xl">
+    <div className="bg-gradient-to-br from-lime-500 to-primary-600 text-white rounded-2xl p-8 shadow-2xl shadow-lime-500/20">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-6">
         <div className="text-center">
           <div className="text-4xl md:text-5xl font-bold mb-2">

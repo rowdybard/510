@@ -44,13 +44,13 @@ export default function TierCard({ tier, isPopular = false, available }: TierCar
     <div
       className={`relative rounded-2xl border-2 p-8 transition-all hover:scale-105 ${
         isPopular
-          ? 'border-orange-500 shadow-2xl shadow-orange-500/20'
-          : 'border-gray-200 dark:border-gray-700 hover:border-orange-500'
-      } ${isSoldOut ? 'opacity-60' : ''} bg-white dark:bg-gray-800`}
+          ? 'border-lime-500 shadow-2xl shadow-lime-500/20'
+          : 'border-slate-200 dark:border-slate-700 hover:border-lime-500'
+      } ${isSoldOut ? 'opacity-60' : ''} bg-white dark:bg-slate-800`}
     >
       {isPopular && (
         <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-          <span className="inline-flex items-center px-4 py-1 rounded-full text-sm font-semibold bg-orange-600 text-white">
+          <span className="inline-flex items-center px-4 py-1 rounded-full text-sm font-medium bg-gradient-to-r from-lime-500 to-primary-600 text-white shadow-lg">
             Most Popular
           </span>
         </div>
@@ -116,12 +116,12 @@ export default function TierCard({ tier, isPopular = false, available }: TierCar
       <button
         onClick={handleCheckout}
         disabled={isSoldOut}
-        className={`w-full py-3 px-6 rounded-lg font-semibold transition-all focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 ${
+        className={`w-full py-3 px-6 rounded-xl font-medium transition-all focus:outline-none focus:ring-2 focus:ring-lime-500 focus:ring-offset-2 ${
           isSoldOut
-            ? 'bg-gray-300 dark:bg-gray-700 text-gray-500 cursor-not-allowed'
+            ? 'bg-slate-300 dark:bg-slate-700 text-slate-500 cursor-not-allowed'
             : isPopular
-            ? 'bg-orange-600 hover:bg-orange-700 text-white'
-            : 'bg-gray-900 dark:bg-white hover:bg-gray-800 dark:hover:bg-gray-100 text-white dark:text-gray-900'
+            ? 'bg-gradient-to-r from-lime-500 to-primary-600 hover:from-lime-600 hover:to-primary-700 text-white shadow-lg hover:shadow-lime-500/25'
+            : 'bg-slate-900 dark:bg-white hover:bg-slate-800 dark:hover:bg-slate-100 text-white dark:text-slate-900'
         }`}
       >
         {isSoldOut ? 'Sold Out' : 'Pre-Order Now'}

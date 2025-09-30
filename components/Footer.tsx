@@ -11,10 +11,10 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-gradient-to-br from-orange-500 to-red-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">GF</span>
+              <div className="w-8 h-8 bg-gradient-to-br from-lime-500 to-primary-600 rounded-lg flex items-center justify-center">
+                <span className="text-white font-semibold text-sm">GF</span>
               </div>
-              <span className="font-bold text-lg text-white">GateFire 510</span>
+              <span className="font-semibold text-lg text-white tracking-tight">GateFire 510</span>
             </div>
             <p className="text-sm">
               The first pocket-proof 510 battery with heat-gated activation technology.
@@ -28,7 +28,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/policies/terms"
-                  className="hover:text-orange-400 transition-colors focus:outline-none focus:ring-2 focus:ring-orange-500 rounded-sm"
+                  className="hover:text-lime-400 transition-colors focus:outline-none focus:ring-2 focus:ring-lime-500 rounded-sm"
                 >
                   Terms of Service
                 </Link>
@@ -36,7 +36,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/policies/privacy"
-                  className="hover:text-orange-400 transition-colors focus:outline-none focus:ring-2 focus:ring-orange-500 rounded-sm"
+                  className="hover:text-lime-400 transition-colors focus:outline-none focus:ring-2 focus:ring-lime-500 rounded-sm"
                 >
                   Privacy Policy
                 </Link>
@@ -44,7 +44,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/policies/preorder"
-                  className="hover:text-orange-400 transition-colors focus:outline-none focus:ring-2 focus:ring-orange-500 rounded-sm"
+                  className="hover:text-lime-400 transition-colors focus:outline-none focus:ring-2 focus:ring-lime-500 rounded-sm"
                 >
                   Pre-Order Policy
                 </Link>
@@ -52,7 +52,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/policies/refund"
-                  className="hover:text-orange-400 transition-colors focus:outline-none focus:ring-2 focus:ring-orange-500 rounded-sm"
+                  className="hover:text-lime-400 transition-colors focus:outline-none focus:ring-2 focus:ring-lime-500 rounded-sm"
                 >
                   Refund Policy
                 </Link>
@@ -66,7 +66,7 @@ export default function Footer() {
             <p className="text-sm mb-2">Questions about your pre-order?</p>
             <a
               href="mailto:hello@gatefire510.com"
-              className="text-orange-400 hover:text-orange-300 transition-colors focus:outline-none focus:ring-2 focus:ring-orange-500 rounded-sm"
+              className="text-lime-400 hover:text-lime-300 transition-colors focus:outline-none focus:ring-2 focus:ring-lime-500 rounded-sm"
             >
               hello@gatefire510.com
             </a>
