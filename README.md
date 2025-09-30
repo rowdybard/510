@@ -159,7 +159,7 @@ Edit `/lib/stripe.ts` - change `TIERS` array:
 3. Click **"New +"** → **"Web Service"**
 4. Connect your GitHub repository
 5. Configure:
-   - **Build Command**: `npm install && npm run build`
+   - **Build Command**: `npm ci && npm run build`
    - **Start Command**: `npm start`
    - **Instance Type**: Starter ($7/mo recommended for production)
 6. Add environment variables (see below)

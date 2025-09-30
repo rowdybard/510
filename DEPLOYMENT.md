@@ -43,7 +43,7 @@ Name: gatefire-510-preorder
 Environment: Node
 Region: Choose closest to your users
 Branch: main
-Build Command: npm install && npm run build
+Build Command: npm ci && npm run build
 Start Command: npm start
 ```
 

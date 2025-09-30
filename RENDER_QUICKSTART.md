@@ -36,7 +36,7 @@ git push -u origin main
 
 **Build Command**:
 ```
-npm install && npm run build
+npm ci && npm run build
 ```
 
 **Start Command**:

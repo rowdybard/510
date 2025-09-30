@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
-import { Analytics } from '@vercel/analytics/react'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -47,13 +46,10 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  const analyticsEnabled = process.env.NEXT_PUBLIC_ANALYTICS_ENABLED === 'true'
-
   return (
     <html lang="en" className="scroll-smooth">
       <body className={inter.className}>
         {children}
-        {analyticsEnabled && <Analytics />}
       </body>
     </html>
   )
